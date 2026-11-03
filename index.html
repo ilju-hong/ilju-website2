@@ -109,6 +109,13 @@
             footer > div:last-child { flex-shrink: 0; }
             footer > div:last-child i { display: none; }
         }
+
+        /* ===== 시작 버튼: 바탕화면 보기 (창은 그대로 두고 숨기기만 함 - PC/모바일 공통) ===== */
+        body[data-desktop="1"] main > section { display: none !important; }
+        body[data-desktop="1"] main > div.absolute { display: flex !important; }
+        body[data-desktop="1"] #taskbar-school,
+        body[data-desktop="1"] #taskbar-kakao { opacity: 0.5; }
+        body[data-desktop="1"] #taskbar-start { background-color: #3b82f6; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.35); }
     </style>
 </head>
 <body class="h-screen w-screen overflow-hidden select-none font-sans desktop-bg flex flex-col justify-between">
@@ -774,7 +781,7 @@
     <!-- Windows Taskbar -->
     <footer class="bg-gray-900/95 text-gray-300 text-xs px-3 py-1.5 border-t border-gray-800 flex justify-between items-center z-50 backdrop-blur-md">
         <div class="flex items-center gap-2">
-            <button class="bg-blue-600 hover:bg-blue-500 text-white p-1.5 px-3 rounded flex items-center gap-1.5 font-semibold transition">
+            <button id="taskbar-start" onclick="toggleDesktop()" title="바탕화면 보기" class="bg-blue-600 hover:bg-blue-500 text-white p-1.5 px-3 rounded flex items-center gap-1.5 font-semibold transition">
                 <i class="fa-brands fa-windows"></i>
                 <span>시작</span>
             </button>
@@ -1458,7 +1465,23 @@
                     if (t) { t.classList.toggle('opacity-50', n !== name); }
                 });
             }
+            // 시작 버튼: 바탕화면 보기 토글 (다시 누르거나 앱을 누르면 원래대로 복귀)
+            window.toggleDesktop = function () {
+                if (document.body.dataset.desktop === '1') {
+                    delete document.body.dataset.desktop;
+                } else {
+                    document.body.dataset.desktop = '1';
+                }
+            };
             window.toggleWindow = function (name) {
+                if (document.body.dataset.desktop === '1') {
+                    // 바탕화면 보기 상태에서 앱(작업표시줄/바탕화면 아이콘)을 누르면 그 앱을 열기
+                    delete document.body.dataset.desktop;
+                    if (mq.matches) { setActive(name); return; }
+                    var w = document.getElementById('window-' + name);
+                    if (w && w.classList.contains('hidden')) original(name);
+                    return;
+                }
                 if (mq.matches) { setActive(name); return; }
                 original(name);
             };
