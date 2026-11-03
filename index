@@ -709,9 +709,9 @@
                                     <div class="flex-1 min-w-0">
                                         <div class="flex justify-between items-baseline mb-0.5">
                                             <span class="text-xs font-bold text-gray-800 truncate">강재원(1-4)</span>
-                                            <span id="chat-preview-time-jaewon" class="text-[9px] text-gray-400">오후 7:07</span>
+                                            <span id="chat-preview-time-jaewon" class="text-[9px] text-gray-400">오전 1:07</span>
                                         </div>
-                                        <p id="chat-preview-text-jaewon" class="text-[11px] text-gray-500 truncate">까불지말라고 했다</p>
+                                        <p id="chat-preview-text-jaewon" class="text-[11px] text-gray-500 truncate">잘자고 아침에 지각하지 마라 답장하지마 나 잘거야</p>
                                     </div>
                                 </div>
                             </div>
@@ -958,6 +958,16 @@
                     { sender: '박시우 (나)', text: '가보고 싶어서 그래', time: '오후 6:36', type: 'right' },
                     { sender: '강재원(1-4)', text: '그럼 가고싶을때마다 저한테 말해요 같이 가게', time: '오후 7:05', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
                     { sender: '박시우 (나)', text: '까불지말라고 했다', time: '오후 7:07', type: 'right' },
+
+                    { type: 'date', date: '2026년 11월 4일 수요일' },
+                    { sender: '박시우 (나)', text: '강재원 잘 들어갔어?', time: '오전 12:29', type: 'right' },
+                    { sender: '강재원(1-4)', text: '네 감사합니다', time: '오전 12:30', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '앞으로 싸울거면 니가 더 많이 때려 오늘은 다구리라는 특수한 상황이긴 했다만', time: '오전 12:30', type: 'right' },
+                    { sender: '강재원(1-4)', text: '선생님이 그렇게 말해도 돼요?', time: '오전 12:31', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '너 다친거 보니까 속상해서 그러지 흉 안남게 약 잘챙겨발라 너 그나마 볼거라곤 키랑 얼굴밖에 없어', time: '오전 1:05', type: 'right' },
+                    { sender: '강재원(1-4)', text: '칭찬이 하고 싶은거예요 욕이 하고 싶은거예요', time: '오전 1:05', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '재원아 너 쌈박질하고 양아치놀이 하는거 곧 재미없어질거야 내가 해봐서 알아 그때 되면 억지로 더 재밌는거 찾지말고 선생님한테 와', time: '오전 1:06', type: 'right' },
+                    { sender: '박시우 (나)', text: '잘자고 아침에 지각하지 마라 답장하지마 나 잘거야', time: '오전 1:07', type: 'right' },
                 ]
             }
         };
