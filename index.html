@@ -310,6 +310,43 @@
 
                     <!-- Chat Messages List -->
                     <div id="school-chat-container" class="flex-1 overflow-y-auto space-y-3 p-1 text-xs">
+                        <!--
+                          ★★★ [교무 메신저 - 1학년부 단체대화] 대화 추가하는 방법 ★★★
+                          1) 아래 [A]/[B]/[C] 중 필요한 블록 하나를 통째로 복사합니다. (맨 윗줄 div 부터 맨 아랫줄 /div 까지)
+                          2) 이 대화창 맨 아래쪽의 "▼▼▼ 여기에 새 대화 추가 ▼▼▼" 표시 바로 아래 줄에 붙여넣습니다.
+                             (대화는 위에서 아래로 시간 순서대로 쌓입니다. 나중 대화일수록 아래에 넣으세요.)
+                          3) "여기에 대화 내용", 이름, 시간만 원하는 글자로 바꿉니다. (class="..." 부분은 건드리지 마세요)
+                          4) 블록 하나 = div 여는 태그 수와 닫는 태그(/div) 수가 같아야 합니다.
+                             하나라도 빠지면 말풍선이 겹치고 아래 "보안 정책 / 온라인" 막대가 위로 밀립니다.
+                          5) 참고: 하단 입력창으로 직접 보내는 메시지는 자동으로 추가되므로 코드를 넣을 필요가 없습니다.
+
+                          [A] 날짜 구분선
+                          <div class="text-center my-2">
+                              <span class="bg-slate-200 text-slate-600 text-[10px] px-2.5 py-1 rounded-full font-medium">2026년 11월 5일 목요일</span>
+                          </div>
+
+                          [B] 상대방(다른 선생님) 말풍선 - 왼쪽 / 이름·성(동그라미 안 글자)·내용을 바꾸세요
+                          <div class="flex gap-2 items-start">
+                              <div class="w-7 h-7 rounded-full bg-slate-400 text-white flex items-center justify-center font-bold text-[11px]">
+                                  김
+                              </div>
+                              <div>
+                                  <div class="text-[10px] text-gray-500 mb-0.5">김학길 교사 (1학년부장)</div>
+                                  <div class="bg-white p-2.5 rounded-r-lg rounded-bl-lg border border-slate-200 shadow-sm max-w-[220px] text-slate-800 leading-relaxed">
+                                      여기에 대화 내용
+                                  </div>
+                              </div>
+                          </div>
+                          (동그라미 색을 바꾸고 싶으면 bg-slate-400 을 bg-indigo-500, bg-rose-500, bg-emerald-500 등으로 바꾸세요)
+
+                          [C] 내(박시우) 말풍선 - 오른쪽
+                          <div class="flex flex-col items-end">
+                              <div class="text-[10px] text-gray-400 mb-0.5">박시우 교사 (나)</div>
+                              <div class="bg-blue-600 text-white p-2.5 rounded-l-lg rounded-br-lg text-xs shadow-sm max-w-[220px] leading-relaxed">
+                                  여기에 대화 내용
+                              </div>
+                          </div>
+                        -->
                         <!-- Message 1 -->
                         <div class="flex gap-2 items-start">
                             <div class="w-7 h-7 rounded-full bg-slate-400 text-white flex items-center justify-center font-bold text-[11px]">
@@ -343,6 +380,9 @@
                                 4반 수련활동 동의서 100% 제출 완료되었습니다!
                             </div>
                         </div>
+
+                        <!-- ▼▼▼ 여기에 새 대화 추가 (위쪽 설명 [A]/[B]/[C] 블록을 복사해서 이 줄 아래에 붙여넣기) ▼▼▼ -->
+
                     </div>
 
                     <!-- Chat Input Field -->
@@ -371,6 +411,44 @@
 
                     <!-- Private Messages Container -->
                     <div id="school-private-container" class="flex-1 overflow-y-auto space-y-3 p-1 text-xs">
+                        <!--
+                          ★★★ [교무 메신저 - 김윤식 1:1 개인대화] 대화 추가하는 방법 ★★★
+                          1) 아래 [A]/[B]/[C] 중 필요한 블록 하나를 통째로 복사합니다. (맨 윗줄 div 부터 맨 아랫줄 /div 까지)
+                          2) 이 대화창 맨 아래쪽의 "▼▼▼ 여기에 새 대화 추가 ▼▼▼" 표시 바로 아래 줄에 붙여넣습니다.
+                             (대화는 위에서 아래로 시간 순서대로 쌓입니다. 나중 대화일수록 아래에 넣으세요.)
+                          3) "여기에 대화 내용", 시간(오후 2:10 같은 부분)만 원하는 글자로 바꿉니다. (class="..." 부분은 건드리지 마세요)
+                          4) 블록 하나 = div 여는 태그 수와 닫는 태그(/div) 수가 같아야 합니다.
+                             하나라도 빠지면 말풍선이 겹치고 아래 "보안 정책 / 온라인" 막대가 위로 밀립니다.
+                          5) 참고: 하단 입력창으로 직접 보내는 메시지는 자동으로 추가되므로 코드를 넣을 필요가 없습니다.
+
+                          [A] 날짜 구분선 (날짜가 바뀌는 곳에 한 번씩)
+                          <div class="text-center my-2">
+                              <span class="bg-slate-200 text-slate-600 text-[10px] px-2.5 py-1 rounded-full font-medium">2026년 11월 5일 목요일</span>
+                          </div>
+
+                          [B] 김윤식 선생님 말풍선 - 왼쪽
+                          <div class="flex gap-2 items-start my-2">
+                              <div class="w-7 h-7 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[11px]">
+                                  김
+                              </div>
+                              <div>
+                                  <div class="text-[10px] text-gray-500 mb-0.5">김윤식 교사 (1-1 담임)</div>
+                                  <div class="bg-white p-2.5 rounded-r-lg rounded-bl-lg border border-amber-200 shadow-sm max-w-[220px] text-slate-800 leading-relaxed">
+                                      여기에 대화 내용
+                                  </div>
+                                  <span class="text-[9px] text-gray-400 mt-1 block">오후 2:10</span>
+                              </div>
+                          </div>
+
+                          [C] 내(박시우) 말풍선 - 오른쪽
+                          <div class="flex flex-col items-end my-2">
+                              <div class="text-[10px] text-amber-800 font-bold mb-0.5">박시우 교사 (나)</div>
+                              <div class="bg-amber-600 text-white p-2.5 rounded-l-lg rounded-br-lg text-xs shadow-sm max-w-[220px] leading-relaxed">
+                                  여기에 대화 내용
+                              </div>
+                              <span class="text-[9px] text-gray-400 mt-0.5">오후 2:14</span>
+                          </div>
+                        -->
                         <div class="text-center my-2">
                             <span class="bg-slate-200 text-slate-600 text-[10px] px-2.5 py-1 rounded-full font-medium">2026년 10월 26일 월요일</span>
                         </div>
@@ -436,6 +514,7 @@
                         </div>
                         <div class="flex gap-2 items-start my-2">
                             <div class="w-7 h-7 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[11px]">
+                                김
                             </div>
                             <div>
                                 <div class="text-[10px] text-gray-500 mb-0.5">김윤식 교사 (1-1 담임)</div>
@@ -494,7 +573,7 @@
                                 </div>
                                 <span class="text-[9px] text-gray-400 mt-1 block">오후 2:10</span>
                             </div>
-                            </div>
+                        </div>
                         <div class="flex flex-col items-end my-2">
                             <div class="text-[10px] text-amber-800 font-bold mb-0.5">박시우 교사 (나)</div>
                             <div class="bg-amber-600 text-white p-2.5 rounded-l-lg rounded-br-lg text-xs shadow-sm max-w-[220px] leading-relaxed">
@@ -502,6 +581,50 @@
                             </div>
                             <span class="text-[9px] text-gray-400 mt-0.5">오후 2:14</span>
                         </div>
+                        <div class="text-center my-2">
+                            <span class="bg-slate-200 text-slate-600 text-[10px] px-2.5 py-1 rounded-full font-medium">2026년 11월 4일 수요일</span>
+                        </div>
+                        <div class="flex flex-col items-end my-2">
+                            <div class="text-[10px] text-amber-800 font-bold mb-0.5">박시우 교사 (나)</div>
+                            <div class="bg-amber-600 text-white p-2.5 rounded-l-lg rounded-br-lg text-xs shadow-sm max-w-[220px] leading-relaxed">
+                                선생님, 재원이 핸드폰 7교시 끝나고 돌려줄게요
+                            </div>
+                            <span class="text-[9px] text-gray-400 mt-0.5">오전 10:14</span>
+                        </div>
+                        <div class="flex gap-2 items-start my-2">
+                            <div class="w-7 h-7 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[11px]">
+                                김
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-gray-500 mb-0.5">김윤식 교사 (1-1 담임)</div>
+                                <div class="bg-white p-2.5 rounded-r-lg rounded-bl-lg border border-amber-200 shadow-sm max-w-[220px] text-slate-800 leading-relaxed">
+                                    제가 9교시 끝나고 돌려주겠다고 했는데요
+                                </div>
+                                <span class="text-[9px] text-gray-400 mt-1 block">오전 10:43</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end my-2">
+                            <div class="text-[10px] text-amber-800 font-bold mb-0.5">박시우 교사 (나)</div>
+                            <div class="bg-amber-600 text-white p-2.5 rounded-l-lg rounded-br-lg text-xs shadow-sm max-w-[220px] leading-relaxed">
+                                빨리 돌려주는 편이 좋을것 같아서요
+                            </div>
+                            <span class="text-[9px] text-gray-400 mt-0.5">오전 10:43</span>
+                        </div>
+                        <div class="flex gap-2 items-start my-2">
+                            <div class="w-7 h-7 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[11px]">
+                                김
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-gray-500 mb-0.5">김윤식 교사 (1-1 담임)</div>
+                                <div class="bg-white p-2.5 rounded-r-lg rounded-bl-lg border border-amber-200 shadow-sm max-w-[220px] text-slate-800 leading-relaxed">
+                                    네 알겠습니다.
+                                </div>
+                                <span class="text-[9px] text-gray-400 mt-1 block">오전 11:02</span>
+                            </div>
+                        </div>
+
+                        <!-- ▼▼▼ 여기에 새 대화 추가 (위쪽 설명 [A]/[B]/[C] 블록을 복사해서 이 줄 아래에 붙여넣기) ▼▼▼ -->
+
                     </div>
 
                     <!-- Private Input Field -->
@@ -685,9 +808,9 @@
                                     <div class="flex-1 min-w-0">
                                         <div class="flex justify-between items-baseline mb-0.5">
                                             <span class="text-xs font-bold text-gray-800 truncate">김윤식 선생님(1-1 담임)</span>
-                                            <span id="chat-preview-time-yunsik" class="text-[9px] text-gray-400">오후 3:18</span>
+                                            <span id="chat-preview-time-yunsik" class="text-[9px] text-gray-400">오후 6:31</span>
                                         </div>
-                                        <p id="chat-preview-text-yunsik" class="text-[11px] text-gray-500 truncate">선생님 발 뭐요 저 수업 간다요ㅂㅂ</p>
+                                        <p id="chat-preview-text-yunsik" class="text-[11px] text-gray-500 truncate">너 좋아하는거 먹자</p>
                                     </div>
                                 </div>
 
@@ -709,9 +832,21 @@
                                     <div class="flex-1 min-w-0">
                                         <div class="flex justify-between items-baseline mb-0.5">
                                             <span class="text-xs font-bold text-gray-800 truncate">강재원(1-4)</span>
-                                            <span id="chat-preview-time-jaewon" class="text-[9px] text-gray-400">오전 1:07</span>
+                                            <span id="chat-preview-time-jaewon" class="text-[9px] text-gray-400">오전 5:03</span>
                                         </div>
-                                        <p id="chat-preview-text-jaewon" class="text-[11px] text-gray-500 truncate">잘자고 아침에 지각하지 마라 답장하지마 나 잘거야</p>
+                                        <p id="chat-preview-text-jaewon" class="text-[11px] text-gray-500 truncate">아까 약속했잖아요 저 약속 잘지켜요</p>
+                                    </div>
+                                </div>
+
+                                <!-- Chat Item 5: 1-4반 단체톡방 -->
+                                <div data-room="class14" onclick="openKakaoChat('class14', 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=150', '🍀 1-4반 단체톡방')" class="p-3 hover:bg-gray-200/80 cursor-pointer flex items-center gap-3 transition">
+                                    <div class="w-11 h-11 rounded-2xl bg-gray-300 text-white flex items-center justify-center flex-shrink-0 text-xl shadow-sm"><i class="fa-solid fa-user"></i></div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between items-baseline mb-0.5">
+                                            <span class="text-xs font-bold text-gray-800 truncate">🤎1-4반 단체톡방🤎</span>
+                                            <span id="chat-preview-time-class14" class="text-[9px] text-gray-400">오후 1:05</span>
+                                        </div>
+                                        <p id="chat-preview-text-class14" class="text-[11px] text-gray-500 truncate">욕은 개인톡으로 하세요</p>
                                     </div>
                                 </div>
                             </div>
@@ -904,6 +1039,23 @@
                     { sender: '박시우 (나)', text: '잘됐다 그냥 본인이라고 하세요', time: '오후 3:05', type: 'right' },
                     { sender: '김윤식 선생님(1-1 담임)', text: '시우야 제발ㅠㅠ', time: '오후 3:16', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
                     { sender: '박시우 (나)', text: '선생님 발 뭐요 저 수업 간다요ㅂㅂ', time: '오후 3:18', type: 'right' },
+
+                    { type: 'date', date: '2026년 11월 4일 수요일' },
+                    { sender: '박시우 (나)', text: '선생님 화나셨어요?', time: '오후 5:22', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '아니 내가 화가 왜 나', time: '오후 5:23', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '제가 선생님 말 안듣고 재원이 핸드폰 돌려줘서 화나신거 아니에요?', time: '오후 5:23', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '네가 학생도 아니고 내 말 좀 안들었다고 화 안나', time: '오후 5:42', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '너도 선생님인데 생각이 있겠지', time: '오후 5:43', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '알겠어요', time: '오후 5:43', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '그래도 재원이 너무 오냐오냐 해주지마 그러다 엇나가면 너만 속상해져 걔가 손가락 걸고 약속할만큼 어린애도 아니고', time: '오후 5:55', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '재원이 그런 애 아니에요 재원이는 제가 더 잘 알아요 제가 알아서 할게요', time: '오후 5:55', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '응', time: '오후 5:55', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '선생님 같이 저녁 먹어요 오늘은 제가 살게요', time: '오후 6:19', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '재원이 때문에 그러는 거면 별로 안먹고 싶은데', time: '오후 6:20', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '그냥 선생님이랑 마주보고 밥먹고 싶어서 그래요', time: '오후 6:21', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '그래 닭갈비 먹자', time: '오후 6:28', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '치킨 먹어도 되는데', time: '오후 6:30', type: 'right' },
+                    { sender: '김윤식 선생님(1-1 담임)', text: '너 좋아하는거 먹자', time: '오후 6:31', type: 'left', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150' },
                 ]
             },
             'math': {
@@ -962,12 +1114,68 @@
                     { type: 'date', date: '2026년 11월 4일 수요일' },
                     { sender: '박시우 (나)', text: '강재원 잘 들어갔어?', time: '오전 12:29', type: 'right' },
                     { sender: '강재원(1-4)', text: '네 감사합니다', time: '오전 12:30', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
-                    { sender: '박시우 (나)', text: '앞으로 싸울거면 니가 더 많이 때려 오늘은 다구리라는 특수한 상황이긴 했다만', time: '오전 12:30', type: 'right' },
+                    { sender: '박시우 (나)', text: '앞으로 싸울거면 니가 더 많이 때려 오늘은 다구리라는 특수한 상황이긴 했지만', time: '오전 12:30', type: 'right' },
                     { sender: '강재원(1-4)', text: '선생님이 그렇게 말해도 돼요?', time: '오전 12:31', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
                     { sender: '박시우 (나)', text: '너 다친거 보니까 속상해서 그러지 흉 안남게 약 잘챙겨발라 너 그나마 볼거라곤 키랑 얼굴밖에 없어', time: '오전 1:05', type: 'right' },
                     { sender: '강재원(1-4)', text: '칭찬이 하고 싶은거예요 욕이 하고 싶은거예요', time: '오전 1:05', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
                     { sender: '박시우 (나)', text: '재원아 너 쌈박질하고 양아치놀이 하는거 곧 재미없어질거야 내가 해봐서 알아 그때 되면 억지로 더 재밌는거 찾지말고 선생님한테 와', time: '오전 1:06', type: 'right' },
-                    { sender: '박시우 (나)', text: '잘자고 아침에 지각하지 마라 답장하지마 나 잘거야', time: '오전 1:07', type: 'right' },
+                    { sender: '박시우 (나)', text: '잘자고 아침에 지각하지마라 답장하지마 나 잘거야', time: '오전 1:07', type: 'right' },
+                    { sender: '박시우 (나)', text: '강재원 너 나랑 손가락 걸고 약속했다 앞으로 수업시간에 핸드폰 만지지마 특히 이어폰 끼고 있는거 그거 진짜 버릇없는거야', time: '오후 4:33', type: 'right' },
+                    { sender: '강재원(1-4)', text: '김윤식 선생님 시간 아니었어도 똑같이 혼냈을거예요?', time: '오후 4:34', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
+                    { sender: '박시우 (나)', text: '응', time: '오후 4:57', type: 'right' },
+                    { sender: '박시우 (나)', text: '다른 선생님 시간이었으면 너 진짜 나한테 맞았어 재원아 밖에서 혼나고 다니지마', time: '오후 4:57', type: 'right' },
+                    { sender: '박시우 (나)', text: '내가 존나 혼낼거니까', time: '오후 4:57', type: 'right' },
+                    { sender: '박시우 (나)', text: '농담이고 보고있으면 나 속상해 넌 왜이렇게 늘 나를 속상하게 하니', time: '오후 4:58', type: 'right' },
+                    { sender: '박시우 (나)', text: '대답.', time: '오전 4:58', type: 'right' },
+                    { sender: '강재원(1-4)', text: '아까 약속했잖아요 저 약속 잘지켜요', time: '오후 5:03', type: 'left', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150' },
+                ]
+            },
+            // ===== 1-4반 단체톡방 =====
+            // [카카오톡 대화 추가 방법] messages 배열 맨 아래에 한 줄씩 추가하면 됩니다. (위에서 아래로 시간순)
+            //   날짜 구분선 : { type: 'date', date: '2026년 11월 5일 목요일' },
+            //   상대 말풍선 : { sender: '이하은', text: '대화 내용', time: '오후 2:20', type: 'left' },
+            //   내 말풍선   : { sender: '박시우 (나)', text: '대화 내용', time: '오후 2:21', type: 'right' },
+            // 목록 미리보기(마지막 대화/시간)는 위쪽 채팅방 목록 HTML의 chat-preview-text-class14 / chat-preview-time-class14 를 바꿔주세요.
+            // 직접 입력창으로 보낸 메시지는 자동으로 저장되고 미리보기도 자동 갱신됩니다.
+            'class14': {
+                id: 'class14',
+                name: '1-4반 단체톡방',
+                title: '🍀 1-4반 단체톡방',
+                avatar: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=150',
+                count: '29명 참여 중',
+                messages: [
+                    { type: 'date', date: '2026년 10월 30일 금요일' },
+                    { sender: '박시우 (나)', text: '얘들아 이번에도 우리반이 수학 꼴지 해준덕에 교무실에서 얼굴을 들고 다닐수가 없다 고마워', time: '오후 5:40', type: 'right' },
+                    { sender: '이하은', text: '죄송합니다ㅠㅠ', time: '오후 5:41', type: 'left' },
+                    { sender: '정민재', text: '쌤 축하드려요', time: '오후 5:41', type: 'left' },
+                    { sender: '박시우 (나)', text: '민재 내일 등교하면 바로 교무실로 와서 한대 맞고 가라', time: '오후 5:50', type: 'right' },
+                    { sender: '최유나', text: '쌤 무서워요ㅠㅠ', time: '오후 5:52', type: 'left' },
+                    { sender: '박시우 (나)', text: '말로만 그러지말고 무서우면 제발 수학공부 열심히 해주라', time: '오후 5:53', type: 'right' },
+
+                    { type: 'date', date: '2026년 11월 2일 월요일' },
+                    { sender: '박시우 (나)', text: '오늘도 세명 이상 지각하면 가만두지 않는다', time: '오전 8:20', type: 'right' },
+                    { sender: '한서윤', text: '쌤 오늘 청소 당번 누구예요?', time: '오전 8:23', type: 'left' },
+                    { sender: '박시우 (나)', text: '서윤아 카톡에 검색기능이 있어요 검색해보세요~', time: '오전 8:25', type: 'right' },
+                    { sender: '박지호', text: '야 한서윤 우리야..', time: '오전 8:26', type: 'left' },
+
+                    { type: 'date', date: '2026년 11월 3일 화요일' },
+                    { sender: '박시우 (나)', text: '수학 수행평가 안내입니다. 다음 주 월요일 수학 시간에 보고 필기구는 인간적으로 좀 챙겨다닙시다 학생들아..', time: '오후 12:40', type: 'right' },
+                    { sender: '이하은', text: '쌤 서술형이에요?', time: '오후 12:42', type: 'left' },
+                    { sender: '박시우 (나)', text: '서술형 비중 30%고 풀이 과정까지 채점해요. 답만 쓰면 점수 반만 줍니다. 부분점수 주니까 뭐라도 적으세요 제발.', time: '오후 12:44', type: 'right' },
+                    { sender: '정민재', text: '헐 풀이도 써야 돼요?', time: '오후 12:45', type: 'left' },
+                    { sender: '박시우 (나)', text: '민재 암산으로 가능하겠니? 암산으로 풀면 점수 두 배로 줄게', time: '오후 12:46', type: 'right' },
+                    { sender: '박지호', text: '질문 있으면 교무실 가도 돼요?', time: '오후 12:47', type: 'left' },
+                    { sender: '박시우 (나)', text: '당연하죠 지호야 학원과제는 스스로 풀어본 흔적 있어야 도와줄거예요~', time: '오후 12:49', type: 'right' },
+
+                    { type: 'date', date: '2026년 11월 4일 수요일' },
+                    { sender: '박시우 (나)', text: '체육시간에 체육복 잘 입고다니세요 특히 남학생들 교복입고 체육금지. 우리반 냄새 너무 심해', time: '오전 8:10', type: 'right' },
+                    { sender: '최유나', text: '쌤 체육복 놓고 왔어요ㅠㅠ', time: '오전 8:12', type: 'left' },
+                    { sender: '박시우 (나)', text: '다른반 친구한테 빌리세요', time: '오전 8:13', type: 'right' },
+                    { sender: '강재원', text: '저 오늘 안 늦었어요', time: '오전 8:20', type: 'left' },
+                    { sender: '박시우 (나)', text: '안다', time: '오전 8:21', type: 'right' },
+                    { sender: '정민재', text: '재원이 칭찬받고 싶었네', time: '오전 8:22', type: 'left' },
+                    { sender: '강재원', text: 'ㅗ', time: '오전 8:23', type: 'left' },
+                    { sender: '박시우 (나)', text: '욕은 개인톡으로 하세요', time: '오후 1:05', type: 'right' },
                 ]
             }
         };
@@ -1494,8 +1702,19 @@
                     // 바탕화면 보기 상태에서 앱(작업표시줄/바탕화면 아이콘)을 누르면 그 앱을 열기
                     delete document.body.dataset.desktop;
                     if (mq.matches) { setActive(name); return; }
-                    var w = document.getElementById('window-' + name);
-                    if (w && w.classList.contains('hidden')) original(name);
+                    // PC: 선택한 앱만 열고, 나머지 앱은 최소화(숨김) 상태로 둠
+                    ['school', 'kakao'].forEach(function (n) {
+                        var w = document.getElementById('window-' + n);
+                        var t = document.getElementById('taskbar-' + n);
+                        if (!w) return;
+                        if (n === name) {
+                            w.classList.remove('hidden'); w.classList.add('flex');
+                            if (t) { t.classList.remove('opacity-50'); t.classList.add('bg-slate-800'); }
+                        } else {
+                            w.classList.add('hidden'); w.classList.remove('flex');
+                            if (t) { t.classList.add('opacity-50'); t.classList.remove('bg-slate-800'); }
+                        }
+                    });
                     return;
                 }
                 if (mq.matches) { setActive(name); return; }
